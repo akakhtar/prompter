@@ -25,15 +25,16 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           </span>
           <textarea
             value={post.prompt}
-            onChange={(e) => setPost({
-              ...post,
-              prompt: e.target.value
-            })}
+            onChange={(e) =>
+              setPost({
+                ...post,
+                prompt: e.target.value,
+              })
+            }
             placeholder="Write your prompt here..."
             required
-          className="form_textarea">
-
-          </textarea>
+            className="form_textarea"
+          ></textarea>
         </label>
 
         <label>
@@ -42,24 +43,33 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           </span>
           <input
             value={post.tag}
-            onChange={(e) => setPost({
-              ...post,
-              tag: e.target.value
-            })}
+            onChange={(e) =>
+              setPost({
+                ...post,
+                tag: e.target.value,
+              })
+            }
             placeholder="#tag"
             required
-          className="form_input"/>
+            className="form_input"
+          />
         </label>
         <div className="flex-end mx-3 mb-5 gap-4">
-          <Link href="/" className='px-5 py-1.5 text-sm bg-pink-900 hover:bg-rose-600 rounded-full text-white'> Cancel</Link>
+          <Link
+            href="/"
+            className="px-5 py-1.5 text-sm bg-pink-900 hover:bg-rose-600 rounded-full text-white"
+          >
+            {" "}
+            Cancel
+          </Link>
           <button
             type="submit"
             disabled={submitting}
-          className="px-5 py-1.5 text-sm bg-green-600 hover:bg-emerald-600 rounded-full text-white">
-               {submitting? `${type}...`:type}
+            className="px-5 py-1.5 text-sm bg-green-600 hover:bg-emerald-600 rounded-full text-white"
+          >
+            {submitting ? `${type}...` : type}
           </button>
-</div>
-
+        </div>
       </form>
     </section>
   );
