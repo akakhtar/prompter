@@ -1,6 +1,6 @@
 # Prompter
 
-![Prompter Logo](/path/to/logo.png)
+![Prompter Logo](public/assets/images/test_logo_2.svg)
 
 Prompter is a Next.js and MongoDB-powered web application that streamlines the sharing and utilization of prompts in OpenAI applications. It enhances content creation efficiency by providing user-friendly features and a secure environment for prompt management.
 
